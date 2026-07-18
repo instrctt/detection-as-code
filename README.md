@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/instrctt/detection-as-code/actions/workflows/ci.yml/badge.svg)
 
-A pipeline that treats security detection rules like software: version-controlled, automatically translated across SIEM platforms, and automatically tested — instead of being written by hand, once, for a single tool.
+A pipeline that treats security detection rules like software: version-controlled, automatically translated across SIEM platforms, and automatically tested, instead of being written by hand, once, for a single tool.
 
 ## The problem
 
@@ -18,7 +18,7 @@ This project writes each detection rule once, using the open-source [Sigma](http
 
 ## Example: PowerShell Encoded Command Detection
 
-The included rule detects PowerShell being launched with an encoded/obfuscated command — a common technique attackers use to hide malicious commands from plain-text log review ([MITRE ATT&CK T1059.001](https://attack.mitre.org/techniques/T1059/001/)).
+The included rule detects PowerShell being launched with an encoded/obfuscated command, a common technique attackers use to hide malicious commands from plain-text log review ([MITRE ATT&CK T1059.001](https://attack.mitre.org/techniques/T1059/001/)).
 
 | Source | Path |
 |---|---|
