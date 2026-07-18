@@ -1,0 +1,29 @@
+name: Detection Rule CI
+
+on: push
+
+jobs:
+  test-detection-rule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install sigma-cli and plugins
+        run: |
+          pip install sigma-cli
+          sigma plugin install splunk --yes
+          sigma plugin install elasticsearch --yes
+          sigma plugin install kusto --yes
+
+      - name: Validate Sigma rule syntax
+        run: sigma check sigma/windows/powershell_encoded_command.yml
+
+      - name: Run detection logic tests
+        run: python3 tests/test_detection_rule.py
