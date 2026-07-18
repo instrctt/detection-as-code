@@ -18,9 +18,9 @@ jobs:
       - name: Install sigma-cli and plugins
         run: |
           pip install sigma-cli
-          sigma plugin install splunk --yes
-          sigma plugin install elasticsearch --yes
-          sigma plugin install kusto --yes
+          sigma plugin install splunk
+          sigma plugin install elasticsearch
+          sigma plugin install kusto
 
       - name: Validate Sigma rule syntax
         run: sigma check sigma/windows/powershell_encoded_command.yml
