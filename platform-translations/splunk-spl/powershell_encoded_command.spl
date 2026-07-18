@@ -1,0 +1,1 @@
+Image="*\\powershell.exe" CommandLine IN ("*-EncodedCommand*", "*-enc *", "*-e *", "* -Enc*") NOT CommandLine="*C:\\Scripts\\legitimate-automation.ps1*"

@@ -1,0 +1,2 @@
+imProcessCreate
+| where (TargetProcessName endswith "\\powershell.exe" and (TargetProcessCommandLine contains "-EncodedCommand" or TargetProcessCommandLine contains "-enc " or TargetProcessCommandLine contains "-e " or TargetProcessCommandLine contains " -Enc")) and (not(TargetProcessCommandLine contains "C:\\Scripts\\legitimate-automation.ps1"))

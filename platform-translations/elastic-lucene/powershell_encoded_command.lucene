@@ -1,0 +1,1 @@
+(process.executable:*\\powershell.exe AND (process.command_line:(*\-EncodedCommand* OR *\-enc\ * OR *\-e\ * OR *\ \-Enc*))) AND (NOT process.command_line:*C\:\\Scripts\\legitimate\-automation.ps1*)
